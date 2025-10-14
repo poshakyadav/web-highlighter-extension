@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Highlighter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="icons/icon48.png" alt="icon" class="logo" />
+        <h1>Web Highlighter</h1>
+      </div>
+      <p class="instructions">
+        Select text on the page and choose a color below to highlight it.
+      </p>
+
+      <div class="color-palette" id="color-palette">
+        <div
+          class="color-box"
+          data-color="#ffadad"
+          style="background-color: #ffadad"
+          title="Light Red"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#ffd6a5"
+          style="background-color: #ffd6a5"
+          title="Light Orange"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#fdffb6"
+          style="background-color: #fdffb6"
+          title="Yellow"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#caffbf"
+          style="background-color: #caffbf"
+          title="Light Green"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#9bf6ff"
+          style="background-color: #9bf6ff"
+          title="Light Blue"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#a0c4ff"
+          style="background-color: #a0c4ff"
+          title="Cornflower Blue"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#bdb2ff"
+          style="background-color: #bdb2ff"
+          title="Light Purple"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#ffc6ff"
+          style="background-color: #ffc6ff"
+          title="Light Pink"
+        ></div>
+      </div>
+
+      <div class="actions">
+        <button id="undo-btn" class="action-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"
+            />
+          </svg>
+          Undo
+        </button>
+        <button id="redo-btn" class="action-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-clockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966a.25.25 0 0 1 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+            />
+          </svg>
+          Redo
+        </button>
+      </div>
+
+      <button id="clear-page-btn" class="clear-btn">
+        Clear All on This Page
+      </button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

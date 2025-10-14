@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Web Highlighter Tool",
+  "version": "1.0.0",
+  "description": "A robust tool to highlight and save text on any webpage. Perfect for researchers, students, and content creators.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/highlighter_icon.svg"
+  },
+  "icons": {
+    "16": "icons/highlighter_icon.svg",
+    "48": "icons/highlighter_icon.svg",
+    "128": "icons/highlighter_icon.svg"
+  },
+  "commands": {
+    "highlight-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Highlight the selected text"
+    }
+  }
+}
